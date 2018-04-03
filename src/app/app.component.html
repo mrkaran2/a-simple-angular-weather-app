@@ -1,0 +1,21 @@
+<h1>Weather App</h1>
+<form>
+  <div class="form-group jumbotron">
+    <input name="city" type="name" placeholder="Enter city name..." class="form-control" [(ngModel)]="cityName" required>
+    <br>
+    <input name="apikey" type="name" placeholder="Enter your API key..." class="form-control" #apiKey>
+    <span>
+      <a href="https://www.weatherbit.io/account/create">Get your own API key</a>
+    </span>
+    <br>
+    <br>
+    <button type="button" (click)="OnSubmit()" class="btn btn-default">Get Weather</button>
+  </div>
+
+</form>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <app-display *ngIf="show"  [description]="this.description" [temp]="this.temp" [city]="this.currentCity"></app-display>
+  </div>
+</div>

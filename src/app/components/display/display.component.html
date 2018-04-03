@@ -1,0 +1,11 @@
+<div class="panel panel-info clearfix">
+  <div class="panel-heading">
+   <b> {{city || 'City Name'}} </b>
+  </div>
+  <div class="panel-body pull-left">
+    <img class="img-responsive" style="width:80px;" [src]="getsrc()">
+  </div>
+  <div class="panel-body pull-right">
+    <h2>{{temp || 'City Temp'}} &deg; C <i>({{description || ''}})</i></h2>
+  </div>
+</div>
